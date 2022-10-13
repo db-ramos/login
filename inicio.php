@@ -1,3 +1,10 @@
+
+<?php
+session_start();
+if(!isset($_SESSION['logado']) ){
+    header("Location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,6 +14,7 @@
 </head>
 <body>
  <h1>Meu sistema</h1>
+ <p><a href="logout.php">Sair</a></p>
  <h2>Bem-vindo à página inicial</h2>
 </body>
 </html>
